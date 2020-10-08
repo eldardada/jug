@@ -1,0 +1,28 @@
+.hero
+    height: 100vh
+    min-height: 600px
+    display: flex
+    align-items: center
+    &__content
+        display: grid
+        grid-template-columns: 5fr 7fr
+        align-items: center
+        height: 100%
+    &__title
+        font-weight: 700
+        font-size: 50px
+        margin-bottom: 20px
+    &__desc
+        font-weight: 300
+        margin-bottom: 120px
+        > p + p
+            margin-top: 20px
+    &__btn-dark
+        margin-left: 20px
+        padding: 20px 7px
+
+.main
+    background: url('static/img/main-img.png') top right
+    background-repeat: no-repeat
+    &__header
+        margin-bottom: 56px

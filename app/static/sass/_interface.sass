@@ -2,3 +2,36 @@ body
     font-family: '#{$mainFont}', sans-serif
     background-color: $bodyBgc
     font-weight: $bodyFw
+
+.main-btn
+    position: relative
+    padding: 20px 45px
+    border-radius: 12px
+    transition: background-color .3s
+    &__icon
+        position: absolute
+        z-index: 1
+        bottom: calc(100% - 3px)
+        left: 50%
+        transform: translateX(-50%)
+.btn_bright
+    background-color: #FBCB03
+    &:hover
+        background-color: #E6B901
+.btn_dark
+    color: #fff
+    background-color: #000
+    &:hover
+        background-color: rgba(0, 0, 0, 0.8)
+.btn_question
+    width: 100%
+    border: 1px solid #FFFFFF
+    border-radius: 45px
+    padding: 16px 30px
+    background-color: transparent
+    transition: background-color .3s, color .3s
+    &:hover
+        background-color: #fff
+        color: #000
+
+

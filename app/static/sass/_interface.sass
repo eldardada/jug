@@ -1,8 +1,3 @@
-body
-    font-family: '#{$mainFont}', sans-serif
-    background-color: $bodyBgc
-    font-weight: $bodyFw
-
 .main-btn
     display: inline-block
     position: relative
@@ -22,19 +17,19 @@ body
     &:hover
         background-color: #E6B901
 .btn_dark
-    color: #fff
-    background-color: #000
+    color: var(--color-white)
+    background-color: var(--color-black)
     &:hover
         background-color: rgba(0, 0, 0, 0.8)
 .btn_question
     width: 100%
-    border: 1px solid #FFFFFF
+    border: 1px solid var(--color-white)
     border-radius: 45px
     padding: 16px 30px
     background-color: transparent
     transition: background-color .3s, color .3s
     &:hover
-        background-color: #fff
-        color: #000
+        background-color: var(--color-white)
+        color: var(--color-black)
 
 

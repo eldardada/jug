@@ -1,31 +1,56 @@
 .hero
-    overflow: hidden
     position: relative
     height: 100vh
     min-height: 600px
     display: flex
     align-items: center
+    overflow-x: hidden
+    padding: 80px 0
+    @media screen and ( max-width: 690px )
+        padding-top: 360px
+    @media screen and ( max-width: 440px )
+        padding-top: 450px
+    @media screen and ( max-width: 352px )
+        padding-top: 500px
     &__content
         display: grid
         grid-template-columns: 5fr 7fr
         align-items: center
         height: 100%
+        @media screen and ( max-width: 1150px )
+            grid-template-columns: 1fr 1fr
+        @media screen and ( max-width: 995px )
+            grid-template-columns: 3fr 2fr
+        @media screen and ( max-width: 875px )
+            grid-template-columns: 1fr
     &__title
+        max-width: 460px
         font-weight: 700
         +font(50, 28)
         margin-bottom: 20px
+        @media screen and ( max-width: 995px )
+            max-width: 400px
+        @media screen and ( max-width: 500px )
+            max-width: 350px
     &__desc
+        max-width: 520px
         font-weight: 300
         margin-bottom: 120px
+        @media screen and ( max-width: 995px )
+            max-width: 360px
         > p + p
             margin-top: 20px
-    &__btn-dark
-        margin-left: 20px
-        padding: 20px 7px
-
+    &__btns
+        max-width: 450px
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 15px
+                        
 .main
     &__header
         margin-bottom: 56px
+        @media screen and ( max-width: 500px )
+            margin-bottom: 56px
 
 .hero-img
     padding-top: 200px
@@ -34,7 +59,29 @@
     position: absolute
     right: 0
     &__image
+        min-width: 714px
         z-index: 1
+    @media screen and ( max-width: 1150px )
+        transform: scale(0.7)
+        right: -140px
+    @media screen and ( max-width: 875px )
+        transform: scale(0.5)
+        top: -210px
+        right: -230px
+    @media screen and ( max-width: 540px )
+        transform: scale(0.4)
+        top: -245px
+        right: -275px
+    @media screen and ( max-width: 440px )
+        transform: scale(0.35)
+        top: -265px
+        right: -300px
+    
+    
+    
+
+
+    
 .lines
     position: absolute
     top: -70px
@@ -46,10 +93,7 @@
     flex-direction: column
     justify-content: space-between
     transform: rotate(45deg)
-    overflow: hidden
-    @media screen and ( max-width: 520px )
-        width: 300px
-        height: 300px
+    overflow: hidden        
     .line
         position: relative
         height: 60px
@@ -65,15 +109,16 @@
             width: 160px
             background-color: #fff
             transform: rotate(-45deg)
-        @media screen and ( max-width: 520px )
-            width: 300px
-            height: 300px
         &-5
             width: 60%
+
 @keyframes move
     0%
         transform: translateY(0)
     100%
         transform: translateY(-160px)
+
+        
+            
 
         
